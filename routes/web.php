@@ -42,3 +42,4 @@ Route::get('/s/{slug}', [UrlShortenerController::class, 'redirect'])->name('shor
 
 
 Route::get('/shortened/{slug}', [UrlShortenerController::class, 'showShortenedUrl'])->name('shortened.show');
+Route::get('/previous-urls', [UrlShortenerController::class, 'previousUrls'])->name('shortened.previous');
