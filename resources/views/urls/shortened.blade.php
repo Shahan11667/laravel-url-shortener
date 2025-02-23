@@ -60,7 +60,9 @@
                     @foreach($analytics as $entry)
                         <tr>
                             <td>{{ $loop->iteration }}</td>
-                            <td>{{ $entry->referrer ?? 'Direct' }}</td>
+                            {{-- <td >{{$entry->referrer ?? 'Direct' }}</td> --}}
+                            <td>{{ Str::limit($entry->referrer ?? 'Direct', 30, '...') }}</td>
+
                             <td>{{ $entry->user_agent }}</td>
                             <td>{{ $entry->created_at->format('Y-m-d H:i:s') }}</td>
                         </tr>

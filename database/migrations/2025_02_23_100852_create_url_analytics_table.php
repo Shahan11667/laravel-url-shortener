@@ -11,7 +11,7 @@ return new class extends Migration {
             $table->foreignId('short_url_id')->constrained()->onDelete('cascade');
             $table->string('ip_address')->nullable();
             $table->string('user_agent')->nullable();
-            $table->string('referrer')->nullable();
+            $table->text('referrer')->nullable();
             $table->timestamps();
         });
     }
